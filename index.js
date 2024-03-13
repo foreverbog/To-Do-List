@@ -15,10 +15,13 @@ const newTodo = () => {
     alert("Item is missing")
     return true;
   }
-
+  let index = localStorage.length+1;
+  // Append a new key-value pair
+  sessionStorage.setItem(index,todoInput.value);
+  localStorage.setItem(index,todoInput.value);
   list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value))
   // list.lastElementChild.querySelector('#deletebtn').addEventListener('click', deleteTodo)
-  // todoInput.value = ""
+   todoInput.value = ""
 }
 
 // const deleteTodo = (el) => {  
@@ -26,5 +29,17 @@ const newTodo = () => {
 
 //   todoContainer.parentNode.removeChild(el.target.parentElement);
 
+// }
+
+// if(localStorage.length > 0)
+// {
+//   Objects.keys(localStorage).forEach((index,) =>{
+//     list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value));
+//   })
+  
+// }
+// window.onload = function() {
+//   localStorage.setItem(index,todoInput.value);
+   
 // }
   
