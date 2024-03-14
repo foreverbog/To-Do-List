@@ -1,5 +1,7 @@
-const list = document.getElementById('todo-list');
-const todoInput = document.getElementById('todo-input');
+const list = document.getElementById('todo-list')
+const todoInput = document.getElementById('todo-input')
+let updateNote = "";
+let count;
 
 const todoTemplate = (todoTask) => `
 <div class="todo-container text-gray-700 text-center mt-2">
@@ -16,26 +18,23 @@ const newTodo = () => {
     return true;
   }
   let index = localStorage.length+1;
-  sessionStorage.setItem(index,todoInput.value);
+  // Append a new key-value pair
   localStorage.setItem(index,todoInput.value);
   list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value));
+  list.lastElementChild.querySelector('#deletebtn').addEventListener('click', deleteTodo);
    todoInput.value = "";
 }
 
 const deleteTodo = (el) => {  
-  const todoContainer = el.target.parentElement
-  todoContainer.parentNode.removeChild(el.target.parentElement);
+  const todoContainer = el.target.parentElement;
+  todoContainer.remove();
+  let index = localStorage.length+1;
+  localStorage.removeItem(index,todoInput.value);
 }
+
 
 // if(localStorage.length > 0)
 // {
 //   Objects.keys(localStorage).forEach((index,) =>{
 //     list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value));
 //   })
-  
-// }
-// window.onload = function() {
-//   localStorage.setItem(index,todoInput.value);
-   
-// }
-  
