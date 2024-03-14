@@ -1,5 +1,5 @@
-const list = document.getElementById('todo-list')
-const todoInput = document.getElementById('todo-input')
+const list = document.getElementById('todo-list');
+const todoInput = document.getElementById('todo-input');
 
 const todoTemplate = (todoTask) => `
 <div class="todo-container text-gray-700 text-center mt-2">
@@ -9,27 +9,23 @@ const todoTemplate = (todoTask) => `
   <button type="" class="font-semibold text-white text-sm cursor-pointer bg-blue-500 px-4 py-2 rounded m-2" id="deletebtn">Delete<button/>
 </div>
 </div>
-`
+`;
 const newTodo = () => {
   if (todoInput.value=='') {
     alert("Item is missing")
     return true;
   }
   let index = localStorage.length+1;
-  // Append a new key-value pair
   sessionStorage.setItem(index,todoInput.value);
   localStorage.setItem(index,todoInput.value);
-  list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value))
-  // list.lastElementChild.querySelector('#deletebtn').addEventListener('click', deleteTodo)
-   todoInput.value = ""
+  list.insertAdjacentHTML('beforeend', todoTemplate(todoInput.value));
+   todoInput.value = "";
 }
 
-// const deleteTodo = (el) => {  
-//   const todoContainer = el.target.parentElement
-
-//   todoContainer.parentNode.removeChild(el.target.parentElement);
-
-// }
+const deleteTodo = (el) => {  
+  const todoContainer = el.target.parentElement
+  todoContainer.parentNode.removeChild(el.target.parentElement);
+}
 
 // if(localStorage.length > 0)
 // {
