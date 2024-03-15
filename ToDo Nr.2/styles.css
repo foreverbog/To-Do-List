@@ -1,0 +1,23 @@
+body{
+    background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    
+}
+.checked {
+    color:red;
+}
+
+.list-container li{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 1rem;
+    background-color: inherit;
+    margin: 1rem
+
+}
+
+.list-container li span {
+    padding:1rem;
+    background-color: bisque;
+    
+}
