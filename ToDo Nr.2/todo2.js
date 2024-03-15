@@ -21,10 +21,11 @@ function addTask () {
         li.innerHTML = taskInput.value;                   //Create a li with the value from input
 
         let button = document.createElement('button')
+        button.classList.add('editBtn')
         button.innerHTML = 'Edit';
         li.appendChild(button)    
         button.addEventListener('click', () => {
-            button.parentElement.contentEditable.innerHTML === 'true'
+            prompt('Edit:')
         })
 
 

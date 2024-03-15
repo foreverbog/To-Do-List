@@ -3,21 +3,32 @@ body{
     background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
     
 }
-.checked {
-    color:red;
-}
 
 .list-container li{
     display: flex;
     justify-content:space-evenly;
     padding: 1rem;
     background-color: inherit;
-    margin: 1rem
+    margin: 1rem;
+    cursor: pointer;
+}
+    
 
+.checked {
+text-decoration: line-through;   
+background-color: green;
+cursor: pointer;
 }
 
 .list-container li span {
     padding:1rem;
-    background-color: bisque;
+    /* background-color: bisque; */
+    border-radius: 50%;
+    border: 1px solid black;
     
+}
+
+.editBtn {
+    background-color: transparent;
+
 }
