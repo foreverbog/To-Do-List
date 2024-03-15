@@ -1,0 +1,24 @@
+
+.task {
+    background-color:gray;
+    padding: 0.3em 0.6em;
+    margin-top: 0.6em;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #d1d3d4;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  .task span {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+  .edit {
+    /* background-color: #0b87ff; */
+    margin-left: auto;
+    margin-right: 3em;
+  }
+  .completed {
+    text-decoration: line-through;
+  }
